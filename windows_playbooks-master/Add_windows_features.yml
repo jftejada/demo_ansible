@@ -1,0 +1,8 @@
+---
+- name: Install windows_features
+  hosts: "{{ windows_vm_hostname }}"
+  gather_facts: false
+  ignore_errors: true
+
+  roles:
+    - windows_features

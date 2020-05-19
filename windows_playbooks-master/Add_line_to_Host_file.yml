@@ -1,0 +1,8 @@
+- name: Add a line to a Host file 
+  hosts: '{{ windows_vm_hostname }}'
+  gather_facts: false
+  tasks:
+  - name: Add a line to a Host file 
+    win_lineinfile:
+     path: 'C:\Windows\System32\drivers\etc\hosts'
+     line: '{{ add_line }}'

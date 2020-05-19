@@ -1,0 +1,9 @@
+- name: Add a local and domain users to a System local group
+  hosts: '{{ windows_vm_hostname }}'
+  gather_facts: false
+  tasks:
+  - name: Add a local and domain users to a System local group
+    win_group_membership:
+     name: '{{ group_name }}
+     members:'{{ member_name }}'
+     state: '{{ Status }}'
