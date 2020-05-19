@@ -1,0 +1,8 @@
+- name: Add a new vCenter license
+  vcenter_license:
+    hostname: '{{ vcenter_ip }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    license: '{{ license_code }}'
+    state: '{{ Status }}'
+  delegate_to: localhost
